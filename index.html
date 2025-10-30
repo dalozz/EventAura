@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="en">
   <head>
@@ -6,6 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Eventaura AI | Transform Event Photos into Stunning AI Art</title>
 
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: { sans: ['Manrope', 'ui-sans-serif', 'system-ui'] },
+            colors: { accent: '#FFC65A' },
+          },
+        },
+      };
+    </script>
+
+    <!-- Your small custom CSS -->
     <link rel="stylesheet" href="./index.css" />
 
     <!-- React & ReactDOM (CDN) -->
@@ -15,19 +31,16 @@
     <!-- Framer Motion (CDN) -->
     <script src="https://unpkg.com/framer-motion/dist/framer-motion.umd.js"></script>
 
-    <!-- Babel so the browser can read JSX files -->
+    <!-- Babel for JSX in the browser -->
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-
-    <script>
-      // convenience alias
-      window.motion = (window.framerMotion && window.framerMotion.motion) || null;
-    </script>
+    <script>window.motion = (window.framerMotion && window.framerMotion.motion) || null;</script>
   </head>
-  <body>
+  <body class="bg-[#0B0B0D] text-white font-sans">
     <div id="root"></div>
 
-    <!-- IMPORTANT: tell Babel to use React + modern JS transforms -->
+    <!-- Load your JSX files with Babel -->
     <script type="text/babel" data-presets="react,env" src="./EventauraSite.jsx"></script>
     <script type="text/babel" data-presets="react,env" src="./index.js"></script>
   </body>
 </html>
+
